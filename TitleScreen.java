@@ -19,10 +19,9 @@ public class TitleScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
 
-        addObject(titleLabel, getWidth()/2, 2);
+        addObject(titleLabel, getWidth()/2, 30);
         prepare();
     }
-
     public void act()
     {
         if(Greenfoot.isKeyDown("space"))
@@ -31,7 +30,6 @@ public class TitleScreen extends World
             Greenfoot.setWorld(gameWorld);
         }
     }
-
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -43,15 +41,13 @@ public class TitleScreen extends World
      */
     private void prepare()
     {
-        Label label = new Label("Press <-- or --> to move", 40);
-        addObject(label,79,195);
-        label.setLocation(326,200);
-        Label label2 = new Label("Press <space> to start", 40);
-        addObject(label2,149,146);
-        label2.setLocation(249,159);
-        label.setLocation(167,281);
-        label2.setLocation(152,199);
-        label.setLocation(128,268);
-        label2.setLocation(135,225);
+        Elephant elephant = new Elephant();
+        addObject(elephant,509,66);
+        elephant.setLocation(515,83);
+        Label label = new Label("Use \u2190 and \u2192 to Move", 40);
+        addObject(label,175,200);
+        Label label2 = new Label("Press <space> to start the game", 40);
+        addObject(label2,9,265);
+        label2.setLocation(250,247);
     }
 }
