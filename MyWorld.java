@@ -34,6 +34,8 @@ public class MyWorld extends World
     public void gameOver()
     {
         Label gameOverLabel = new Label("Game Over", 100);
+        Label highScoreLabel = new Label("High Score: " + score, 60);
+        addObject(highScoreLabel, 300, 90);
         addObject(gameOverLabel, 300, 200);
     }
     public void increaseScore()
@@ -66,7 +68,7 @@ public class MyWorld extends World
     }
     public void decreaseScore()
     {
-        score--;
+        score-=5;
         scoreLabel.setValue(score);
         if(score < 0)
         {
