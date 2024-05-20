@@ -13,9 +13,11 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    public static int highestScore = 0;
     public int score = 0;
     Label scoreLabel;
     int level = 1;
+    GreenfootSound endSound = new GreenfootSound("death.mp3");
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -27,15 +29,25 @@ public class MyWorld extends World
         scoreLabel = new Label(0,80);
         addObject(scoreLabel, 50,50);
         
+        Label highestScoreLabel = new Label("HighScore:" + MyWorld.getHighestScore(),30);
+        addObject(highestScoreLabel, 520, 40);
+        
         createApple();
         createBanana();
     }
     
     public void gameOver()
     {
+        
+        if(score > highestScore)
+        
+        {
+            highestScore = score;
+        }
+        
         Label gameOverLabel = new Label("Game Over", 100);
-        Label highScoreLabel = new Label("High Score: " + score, 60);
-        addObject(highScoreLabel, 300, 90);
+        //Label highScoreLabel = new Label("High Score: " + score, 60);
+        //addObject(highScoreLabel, 300, 90);
         addObject(gameOverLabel, 300, 200);
     }
     public void increaseScore()
@@ -73,6 +85,14 @@ public class MyWorld extends World
         if(score < 0)
         {
             gameOver();
+            endSound.play();
+            Greenfoot.stop();
+            
         }
+    }
+    
+    public static int getHighestScore()
+    {
+        return highestScore;
     }
 }

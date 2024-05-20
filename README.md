@@ -1,14 +1,8 @@
 # Hungry Animal Tutorial
-This is the README.md file.
-Change this file to show your intended audience what you want them to see.
+The features I added into the game is a banana that decreases your score by 5 points. If the score
+is less than 0 then the game ends.
 
-You can use **Markdown** syntax to format this file to do things like **bold** or *italicize* text.
-[Markdown basics](https://www.markdownguide.org/getting-started/)
+Another feature I added is a death sound which is the mario death sound.
 
-This particular repository is the starting template for the Hungry Elephant tutorial.
+Another feature I added is a high score feature that displays the high score on the top right of the screen.
 
-[Part 1: Greenfoot Basics](https://youtu.be/zxaa3X0MihI)
-
-[Part 2: Game Enhancements](https://youtu.be/TwID9i0Ey6o)
-
-[Part 3: Final Touches](https://youtu.be/GT-eFwa4Abc)
