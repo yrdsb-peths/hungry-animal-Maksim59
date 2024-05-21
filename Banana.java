@@ -13,7 +13,6 @@ public class Banana extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int speed = 1;
-    
     public void act()
     {
         // Add your action code here.
